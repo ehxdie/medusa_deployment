@@ -1,15 +1,9 @@
 [phases.setup]
-nixPkgs = ['nodejs-16_x', 'postgresql', 'redis', 'cowsay']
-cmds = ['npm install']
+nixPkgs = ['...', 'cowsay']
 
 [phases.build]
-cmds = ['npm run build']
+cmds = ['yarn run server:build']
 
 [start]
-cmd = 'npm run start'
-
-[variables]
-DATABASE_URL = "postgres://postgres:Ed1d1ongeph@localhost:5432/medusa-db-pltom"
-REDIS_URL = "redis://user:password@host:port"
-
+cmd = 'yarn run server:start'
 
