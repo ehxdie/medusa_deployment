@@ -1,0 +1,15 @@
+[phases.setup]
+nixPkgs = ['nodejs-16_x', 'postgresql', 'redis', 'cowsay']
+cmds = ['npm install']
+
+[phases.build]
+cmds = ['npm run build']
+
+[start]
+cmd = 'npm run start'
+
+[variables]
+DATABASE_URL = "postgres://postgres:Ed1d1ongeph@localhost:5432/medusa-db-pltom"
+REDIS_URL = "redis://user:password@host:port"
+
+
